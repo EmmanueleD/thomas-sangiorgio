@@ -1,2 +1,5 @@
 # Local Impeccable review captures
 .impeccable/review/
+
+# DNS import/export artifacts
+dns_zone_*.csv

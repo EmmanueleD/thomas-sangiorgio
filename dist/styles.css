@@ -264,3 +264,219 @@ body {
     max-width: none;
   }
 }
+
+/* ---------- Multi-page editorial structure ---------- */
+
+.masthead__link {
+  display: block;
+  text-decoration: none;
+}
+
+.masthead__link:hover {
+  text-decoration: none;
+}
+
+.cta-link {
+  color: var(--color-ink);
+  display: inline-block;
+  text-decoration: none;
+  text-underline-offset: 4px;
+}
+
+.cta-link::after {
+  content: "";
+  display: block;
+  border-top: 1px solid var(--color-ink);
+  margin-top: 0.35rem;
+  width: 100%;
+}
+
+.cta-link:hover {
+  text-decoration: none;
+}
+
+.hero--home {
+  min-height: 34rem;
+  align-items: center;
+}
+
+.feature-card {
+  border-block: 1px solid var(--color-ink);
+  padding-block: var(--spacing-30);
+}
+
+.feature-card__label,
+.book-card__meta,
+.purchase-panel__label {
+  color: var(--color-ash);
+}
+
+.feature-card__title {
+  color: var(--color-graphite);
+  font-family: var(--font-display);
+  font-size: var(--text-heading);
+  font-weight: 400;
+  letter-spacing: var(--tracking-heading);
+  line-height: var(--leading-heading);
+  margin-block: var(--spacing-14);
+}
+
+.feature-card__copy {
+  color: var(--color-ash);
+  margin-bottom: var(--spacing-30);
+}
+
+.page-title {
+  padding-block: var(--spacing-48);
+}
+
+.page-title__heading {
+  color: var(--color-graphite);
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  font-weight: 400;
+  letter-spacing: var(--tracking-display);
+  line-height: var(--leading-display);
+}
+
+.page-title__copy {
+  color: var(--color-ash);
+  margin-top: var(--spacing-30);
+  max-width: 58ch;
+}
+
+.route-list {
+  display: grid;
+  gap: var(--spacing-14);
+}
+
+.route-item {
+  border-top: 1px solid var(--color-ink);
+  color: var(--color-ink);
+  display: grid;
+  gap: var(--spacing-11);
+  padding-block: var(--spacing-14);
+  text-decoration: none;
+}
+
+.route-item:last-child {
+  border-bottom: 1px solid var(--color-ink);
+}
+
+.route-item__title {
+  color: var(--color-graphite);
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 1.35rem + 1.8vw, 3rem);
+  line-height: 1.15;
+}
+
+.route-item__meta {
+  color: var(--color-ash);
+}
+
+.book-list {
+  padding-block: var(--spacing-48);
+}
+
+.book-card {
+  display: grid;
+  grid-template-columns: minmax(12rem, 20rem) 1fr;
+  gap: var(--spacing-48);
+  align-items: start;
+}
+
+.book-card__cover {
+  display: block;
+}
+
+.book-card__cover img {
+  width: 100%;
+  height: auto;
+}
+
+.book-card__title {
+  font-family: var(--font-display);
+  font-size: var(--text-heading);
+  font-weight: 400;
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
+  margin-block: var(--spacing-11) var(--spacing-30);
+}
+
+.book-card__copy {
+  color: var(--color-ash);
+  max-width: 56ch;
+}
+
+.book-card__actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-14) var(--spacing-30);
+  margin-top: var(--spacing-30);
+}
+
+.purchase-panel {
+  border-block: 1px solid var(--color-ink);
+  margin-top: var(--spacing-30);
+  padding-block: var(--spacing-30);
+}
+
+.purchase-panel__action {
+  color: var(--color-ink);
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 1.25rem + 2.2vw, 3.9375rem);
+  font-weight: 400;
+  letter-spacing: var(--tracking-heading);
+  line-height: 1.1;
+  margin-top: var(--spacing-14);
+  text-decoration: none;
+}
+
+.purchase-panel__action:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.closing-cta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-48);
+  padding-block: var(--spacing-48);
+}
+
+.closing-cta__title {
+  color: var(--color-graphite);
+  font-family: var(--font-display);
+  font-size: var(--text-heading);
+  font-weight: 400;
+  letter-spacing: var(--tracking-heading);
+  line-height: var(--leading-heading);
+}
+
+.closing-cta__copy {
+  color: var(--color-ash);
+  max-width: 48ch;
+}
+
+@media (max-width: 47.5rem) {
+  .hero--home {
+    min-height: auto;
+  }
+
+  .book-card,
+  .closing-cta {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-30);
+  }
+
+  .book-card__cover {
+    max-width: 18rem;
+  }
+
+  .purchase-panel__action {
+    font-size: clamp(2rem, 12vw, 3.5rem);
+  }
+}

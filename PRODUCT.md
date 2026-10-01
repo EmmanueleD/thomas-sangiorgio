@@ -16,18 +16,18 @@ Lettori potenziali — chi arriva alla pagina (da un link condiviso, dai social 
 
 ## Product Purpose
 
-Pagina personale di Thomas Sangiorgio, scrittore, interamente dedicata al suo primo romanzo pubblicato, *Il Carro di Contenebra*. Successo: il visitatore capisce che il libro esiste, ne percepisce il tono (gotico / fiaba nera) e raggiunge la pagina Amazon per l'acquisto.
+Sito personale di Thomas Sangiorgio, scrittore, strutturato come presenza autoriale minima: home, indice libri e schede di dettaglio. Successo: il visitatore capisce chi firma il sito, trova l'elenco delle opere e raggiunge la scheda del libro con una CTA chiara verso Amazon.
 
 ## Positioning
 
-Sito monografico su un'unica opera: niente portfolio, niente blog, niente sezione autore (decisione utente, 2026-10-01). Il libro è l'unico protagonista; l'autore appare solo nel masthead.
+Sito autore essenziale, non blog e non portfolio: home istituzionale leggera, pagina listing dei libri e pagina dettaglio per ogni opera. L'autore resta nel masthead e nella struttura del sito; i contenuti editoriali verificati restano sulle schede libro.
 
 ## Capabilities and Constraints
 
-- Una sola pagina statica, contenuti in italiano.
-- Nessuna sezione autore, nessuna bio, nessuna foto dell'autore (decisione utente). La bio ironica presente sulla quarta di copertina resta disponibile come fonte futura.
-- Nessun contatto, social o newsletter disponibile: non inventarli.
-- Unica CTA: link Amazon <https://www.amazon.it/dp/B0HLBCMYPP>.
+- Sito statico multi-pagina, contenuti in italiano.
+- Home, listing libri e pagina dettaglio libro; nessun blog, portfolio, contatto, social o newsletter inventato.
+- Nessuna bio estesa o foto dell'autore senza contenuti verificati. La bio ironica presente sulla quarta di copertina resta disponibile come fonte futura.
+- CTA primaria sulle schede libro: link Amazon <https://www.amazon.it/dp/B0HLBCMYPP>.
 
 ## Brand Commitments
 
@@ -41,7 +41,7 @@ Sito monografico su un'unica opera: niente portfolio, niente blog, niente sezion
 
 ## Product Principles
 
-1. Il libro è il protagonista: ogni elemento serve il romanzo, mai il contrario.
+1. La struttura è autoriale, ma il contenuto resta editoriale: home essenziale, indice opere, schede libro forti.
 2. Solo contenuti verificati: testi dalla pagina Amazon o dalla quarta di copertina; mai inventare bio, recensioni o premi.
 3. Semplicità radicale: niente build, niente JS, niente dipendenze senza motivazione concreta.
 4. Italiano first: lingua dei contenuti e dell'interfaccia.
