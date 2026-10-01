@@ -485,3 +485,50 @@ body {
     font-size: clamp(2rem, 12vw, 3.5rem);
   }
 }
+
+/* ---------- CTA hierarchy refinements ---------- */
+
+.hero__actions,
+.feature-card__actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-14);
+  margin-top: var(--spacing-30);
+}
+
+.button--primary {
+  background: var(--color-ink);
+  color: var(--color-bone);
+}
+
+.button--primary:hover {
+  background: transparent;
+  color: var(--color-ink);
+}
+
+.button--nav {
+  min-height: 2.5rem;
+  padding: 0.45rem 0.85rem;
+}
+
+.purchase-panel--early {
+  margin-top: var(--spacing-30);
+}
+
+.purchase-panel--early + .hero__intro {
+  margin-top: var(--spacing-30);
+}
+
+@media (max-width: 47.5rem) {
+  .hero__actions,
+  .feature-card__actions,
+  .book-card__actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
