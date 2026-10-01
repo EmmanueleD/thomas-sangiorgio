@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-Static HTML/CSS (scelta esplicita dell'utente, 2026-10-01). Nessuna build, nessuna dipendenza, nessun JS richiesto. Deploy target: GitHub Pages via GitHub Actions, pubblicando la directory `dist/`. Sites resta una pubblicazione precedente privata.
+Static HTML/CSS (scelta esplicita dell'utente, 2026-10-01). Nessuna build, nessuna dipendenza, nessun JS richiesto. Deploy target: GitHub Pages via GitHub Actions, pubblicando la directory `dist/`, con dominio custom `thomassangiorgio.it`. Sites resta una pubblicazione precedente privata.
 
 ## Users
 
