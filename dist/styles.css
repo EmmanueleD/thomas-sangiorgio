@@ -532,3 +532,31 @@ body {
     width: 100%;
   }
 }
+
+/* ---------- Detail page purchase rhythm ---------- */
+
+.purchase-panel--compact {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-14) var(--spacing-30);
+}
+
+.purchase-panel--compact .purchase-panel__label {
+  flex: 1 1 18rem;
+}
+
+.purchase-panel--compact .button {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 47.5rem) {
+  .purchase-panel--compact {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .purchase-panel--compact .button {
+    flex: none;
+  }
+}
