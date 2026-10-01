@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-Static HTML/CSS (scelta esplicita dell'utente, 2026-10-01). Nessuna build, nessuna dipendenza, nessun JS richiesto. Deploy target: non ancora deciso (Netlify / Vercel / GitHub Pages sono tutti compatibili).
+Static HTML/CSS (scelta esplicita dell'utente, 2026-10-01). Nessuna build, nessuna dipendenza, nessun JS richiesto. Deploy target: Sites, pubblicazione privata iniziale. Netlify / Vercel / GitHub Pages restano compatibili se si riallinea la directory pubblica.
 
 ## Users
 
@@ -36,7 +36,7 @@ Sito monografico su un'unica opera: niente portfolio, niente blog, niente sezion
 
 ## Evidence on Hand
 
-- `assets/cover.jpg` — copertina frontale (334×500), scaricata dal CDN Amazon il 2026-10-01.
+- `dist/assets/cover.jpg` — copertina frontale (334×500), scaricata dal CDN Amazon il 2026-10-01.
 - Sinossi ufficiale e dichiarazione di genere (dalla pagina Amazon / quarta di copertina), usate verbatim.
 
 ## Product Principles
