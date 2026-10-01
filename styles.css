@@ -1,0 +1,266 @@
+/* ==========================================================================
+   Thomas Sangiorgio — Il Carro di Contenebra
+   Mondo visivo: "editorial monograph" (docs/DESIGN.md — pinned dall'utente)
+   ========================================================================== */
+
+:root {
+  /* Colors */
+  --color-bone: #f2f1ec;
+  --color-ink: #000000;
+  --color-graphite: #333332;
+  --color-ash: #5d5b5b;
+
+  /* Typography — families (sostituti da docs/DESIGN.md) */
+  --font-display: 'Playfair Display', 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-utility: 'Rubik', Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Typography — scale (fluida: 63px e 94px come ceiling da DESIGN.md) */
+  --text-body: 1rem;              /* 16px */
+  --leading-body: 1.5;
+  --text-heading: clamp(2.25rem, 1.4rem + 3.4vw, 3.9375rem);   /* → 63px */
+  --leading-heading: 1.2;
+  --tracking-heading: 0.01em;
+  --text-display: clamp(2.25rem, 1.2rem + 6.5vw, 5.875rem);    /* → 94px; min 36px: "SANGIORGIO" entra anche a 320px */
+  --leading-display: 1;
+  --tracking-display: 0.01em;
+
+  /* Spacing (base 6px) */
+  --spacing-11: 0.6875rem;
+  --spacing-14: 0.875rem;
+  --spacing-30: 1.875rem;
+  --spacing-48: 3rem;
+
+  /* Layout */
+  --page-max-width: 75rem;        /* 1200px */
+}
+
+/* ---------- Reset mirato ---------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1, h2, h3,
+p, figure, dl, dd {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ---------- Base ---------- */
+
+body {
+  background: var(--color-bone);
+  color: var(--color-ink);
+  font-family: var(--font-utility);
+  font-size: var(--text-body);
+  font-weight: 400;
+  line-height: var(--leading-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Superfici del browser che ereditano il sistema */
+::selection {
+  background: var(--color-ink);
+  color: var(--color-bone);
+}
+
+:focus-visible {
+  outline: 1px solid var(--color-ink);
+  outline-offset: 3px;
+}
+
+.page {
+  max-width: var(--page-max-width);
+  margin-inline: auto;
+  padding-inline: var(--spacing-30);
+}
+
+/* ---------- Skip link ---------- */
+
+.skip-link {
+  position: absolute;
+  left: var(--spacing-14);
+  top: var(--spacing-14);
+  padding: var(--spacing-11) var(--spacing-14);
+  background: var(--color-bone);
+  color: var(--color-ink);
+  transform: translateY(-300%);
+}
+
+.skip-link:focus-visible {
+  transform: none;
+}
+
+/* ---------- Link testuali: unico elemento interattivo del sistema ---------- */
+
+.link {
+  color: var(--color-ink);
+  text-decoration: none;
+  text-underline-offset: 4px;
+}
+
+.link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+/* ---------- Masthead (Top Bar) ---------- */
+
+.masthead {
+  padding-block: var(--spacing-48) var(--spacing-30);
+}
+
+.masthead__name {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  font-weight: 400;
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-display);
+  color: var(--color-graphite);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.masthead__role {
+  margin-top: var(--spacing-11);
+  color: var(--color-ash);
+  text-align: right;
+}
+
+/* ---------- Section Divider ---------- */
+
+.rule {
+  border: 0;
+  border-top: 1px solid var(--color-ink);
+  margin: 0;
+}
+
+/* ---------- Sub-Nav Row ---------- */
+
+.subnav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--spacing-11) var(--spacing-30);
+  padding-block: var(--spacing-30);
+}
+
+/* ---------- Hero: split asimmetrico testo / copertina ---------- */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-48);
+  align-items: start;
+  padding-block: var(--spacing-48);
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-size: var(--text-heading);
+  font-weight: 400;
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
+  color: var(--color-graphite);
+}
+
+.hero__intro {
+  margin-top: var(--spacing-30);
+  max-width: 48ch;
+  color: var(--color-ash);
+}
+
+.hero__cta {
+  margin-top: var(--spacing-30);
+}
+
+.hero__cover img {
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+}
+
+/* ---------- Sezioni split: etichetta serif a sinistra, corpo a destra ---------- */
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-48);
+  align-items: start;
+  padding-block: var(--spacing-48);
+}
+
+.split__heading {
+  font-family: var(--font-display);
+  font-size: var(--text-heading);
+  font-weight: 400;
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
+  color: var(--color-graphite);
+}
+
+.split__body {
+  max-width: 65ch;
+  color: var(--color-ash);
+}
+
+.split__body p + p {
+  margin-top: var(--spacing-14);
+}
+
+/* ---------- Scheda edizione ---------- */
+
+.facts {
+  display: grid;
+  gap: var(--spacing-11);
+}
+
+.facts__row {
+  display: flex;
+  gap: var(--spacing-14);
+}
+
+.facts__row dt {
+  flex: 0 0 7.5rem;
+  color: var(--color-ink);
+}
+
+.facts__row dd {
+  color: var(--color-ash);
+}
+
+/* ---------- Colophon ---------- */
+
+.colophon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--spacing-11) var(--spacing-30);
+  padding-block: var(--spacing-30) var(--spacing-48);
+}
+
+.colophon__note {
+  color: var(--color-ash);
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 47.5rem) {
+  .hero,
+  .split {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-30);
+  }
+
+  .split__body {
+    max-width: none;
+  }
+}
